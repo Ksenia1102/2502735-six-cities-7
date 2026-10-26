@@ -22,7 +22,7 @@ function App({offers}: AppScreenProps): JSX.Element {
           path={AppRoute.Favorites}
           element={
             <PrivateRoute
-              authorizationStatus={AuthorizationStatus.NoAuth} // пока не авторизован по дефолту
+              authorizationStatus={AuthorizationStatus.Auth} // пока не авторизован по дефолту
             >
               <Favorites offers={offers} />
             </PrivateRoute>
