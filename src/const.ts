@@ -27,3 +27,12 @@ export enum AuthorizationStatus {
   NoAuth = 'NO_AUTH',
   Unknown = 'UNKNOWN',
 }
+
+/**
+ * Перечесление для метки на карте.
+ * Содержит параметры, обозначающие статусы активности метки.
+ */
+export enum Pins {
+  Default = 'img/pin.svg',
+  Active = 'img/pin-active.svg',
+}

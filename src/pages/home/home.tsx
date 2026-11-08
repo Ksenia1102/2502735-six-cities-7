@@ -1,15 +1,16 @@
-//import Card from '../../components/cards/cards';
+import { useState } from 'react';
 import OfferList from '../../components/offer-list/offer-list';
+import Map from '../../components/map/map';
 import { Offer } from '../../types/offer';
 
 type HomeProps = {
   offers: Offer[];
 };
-// type MainPageProps = {
-//   offersCount: number;
-// };
 
 function Home({ offers }: HomeProps): JSX.Element {
+  const [selectedPoint] = useState<string | null>(null);
+  const city = offers[0].city.location;
+  const points = offers.map(({ id, location }) => ({ id, location }));
   return (
     <div className="page page--gray page--main">
       <header className="header">
@@ -89,7 +90,7 @@ function Home({ offers }: HomeProps): JSX.Element {
               <OfferList offers={offers} />
             </section>
             <div className="cities__right-section">
-              <section className="cities__map map"></section>
+              <Map city={city} points={points} selectedPoint={selectedPoint} />
             </div>
           </div>
         </div>

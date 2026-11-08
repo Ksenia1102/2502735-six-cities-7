@@ -23,3 +23,7 @@ export type Offer = {
 };
 
 export type Offers = Offer[];
+
+export type Point = Pick<Offer, 'id' | 'location'>;
+
+export type Points = Point[];
