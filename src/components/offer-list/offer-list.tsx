@@ -1,4 +1,3 @@
-// src/components/offer-list/offer-list.tsx
 import { useState } from 'react';
 import Card from '../cards/cards';
 import { Offer } from '../../types/offer';
